@@ -12,10 +12,10 @@ namespace OrderTracker.Models
 
     public Order(string description)
     {
-      Title = title; 
+      //Title = title; 
       Description = description; 
-      Price = price; 
-      Date = date; 
+      //Price = price; 
+      //Date = date; 
     }
   }
 }
