@@ -6,7 +6,7 @@ using System;
 namespace OrderTracker.TestTools
 {
   [TestClass]
-  public class VendorTests : IDisposable
+  public class VendorTests
   {
 
   }

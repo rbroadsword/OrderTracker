@@ -10,7 +10,7 @@ namespace OrderTracker.Models
     public int Date { get; set; }
   
 
-    public Order(string title)
+    public Order(string description)
     {
       Title = title; 
       Description = description; 
