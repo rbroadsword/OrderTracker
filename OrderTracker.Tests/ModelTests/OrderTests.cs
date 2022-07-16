@@ -20,5 +20,16 @@ namespace OrderTracker.TestTools
       Order newOrder = new Order("test order"); 
       Assert.AreEqual(typeof(Order), newOrder.GetType()); 
     }
+
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String(title)
+    {
+      string name = "test title"; 
+      Order newOrder = new Order(name); 
+      string result = newOrder.Title; 
+      Assert.AreEqual(name, result); 
+
+      
+    }
   }
 }
