@@ -4,17 +4,38 @@ namespace OrderTracker.Models
 {
   public class Vendor
   {
+    private static List<Order> _instances = new List<Order> { };
     public string Name { get; set; }
-    public string Description { get; set; }
     public int Id { get; }
-    private static List<Order> _instances = new List<Order> { }; 
+    public List<Order> Orders { get; set; }
+    
 
-    public Vendor(string description)
+    public Vendor(string vendorName)
     {
-      //Name = name; 
-      Description = description; 
-      //_instances.Add(this); 
-      //Id = instances.Count; 
+      Name = vendorName; 
+      _instances.Add(this); 
+      Id = instances.Count; 
+      Orders = new List<Order>{}; 
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear(); 
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances; 
+    }
+
+    public static Vendor Find(int searchId)
+    {
+      return _instances[searchId-1]; 
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order); 
     }
   }
 }
