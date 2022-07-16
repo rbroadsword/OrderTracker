@@ -22,10 +22,10 @@ namespace OrderTracker.TestTools
     }
 
     [TestMethod]
-    public void GetTitle_ReturnsTitle_String(title)
+    public void GetTitle_ReturnsTitle_String(string description, string title)
     {
       string name = "test title"; 
-      Order newOrder = new Order(name); 
+      Order newOrder = new Order(description, name); 
       string result = newOrder.Title; 
       Assert.AreEqual(name, result); 
 
