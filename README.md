@@ -39,6 +39,8 @@ Pierre should be provided with a link to a page presenting him with a form to cr
 ## Known Bugs
 
 * CSS styles is not implementing. 
+* Error CS1503 in Vendor.cs
+* Error CS0029 in Vendor.cs
 
 
 ## License
